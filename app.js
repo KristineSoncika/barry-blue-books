@@ -28,7 +28,8 @@ const db = new sqlite3.Database(
 );
 
 // runs server (http://localhost:3000/)
-app.listen(3000, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
   console.log("Server started");
 });
 
